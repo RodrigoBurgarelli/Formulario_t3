@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário T3</title>
 </head>
+
 <body>
     <header>
         <h1>Cadastre-se</h1>
@@ -15,19 +17,69 @@
             <fieldset>
                 <legend>Preencha os campos</legend>
                 <div> <label for="Nome"> Nome: </label>
-                <input type="text" name="Nome" id="Nome" placeholder="Escreva seu nome"/>
+                    <input type="text" name="Nome" id="Nome" placeholder="Escreva seu nome" />
                 </div>
-                
+
 
                 <div> <label for="email"> E-mail: </label>
-                <input type="email" name="email" id="email" placeholder="Escreva seu e-mail"/>
+                    <input type="email" name="email" id="email" placeholder="Escreva seu e-mail" />
                 </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" />
+
+                </div>
+-
+            </fieldset>
+
+            <fieldset>
+                <label for="estados">Estados:</label>
+                <select name="estados" id="estados">
+                    <option value="SE">SE</option>
+                    <option value="PB">PB</option>
+                    <option value="BA">BA</option>
+                    <option value="MG">MG</option>
+                    <option value="SP">SP</option>
+                </select>
+
+                <!-- o input SELECT você seleciona a opção dentre as opções que você indicar-->
+
+                <label for="nascimento"> Data de Nascimento</label>
+                <input type="date" name="nascimento" id="nascimento"/>
+
+                <label for="foto">Selecione uma foto</label>
+                <input type="file" name="foto" id="foto" accept="image/png, image/jpeg, doc/pdf">
+                <!-- o accept irá limitar qual arquivo poderá ser adicionado. Não precisa colocar o ACCEPT, a menos que você precise limitar para algun (s) tipos de arqivo-->
+
 
 
             </fieldset>
-                    
-        </form>
+            <fieldset>
+                <legend>Você é um robô?</legend>
+                <p>Você está sendo observado</p>
+                <img src="https://images.vexels.com/media/users/3/201138/isolated/lists/143b8e1550deda3eadf5a8c0045cbb0f-robo-de-brinquedo-plano.png" width="100" alt="Figura de um robô vede"/>
+
+              <input type="radio" name="robo" id="sim"/>
+                <label for="sim">Sim, sou um robô</label>
+
+                <input type="radio" name="robo" id="nao"/>
+                <label for="nao">Não, não sou um robô</label>
+
+                <input type="radio" name="robo" id="talvez"/>
+                <label for="talvez">Talvez eu seja um robô</label>
+                <!-- input do tipo RADIO, trabalha em conjunto, pois como ele vai colocar multiplicas escolhas para que o usuário possa escolher somente uma opção. Por isso, ao escolher o name, precisamos colocar o mesmo para todas as opções-->
+            
+                <input type="checkbox" name="acordo" id="acordo"/>
+                <label for="acordo">Declaro que sou um robô e vim pedir educação no chatgpt</label>
+            </fieldset>
+<!-- temos duas opções para colocar um botão de enviar: SUBMIT ou BUTTON.
+ 
+o input SUBMIT irá submeter o formulário, mas ele é um pouco mais limitado. O input BUTTON irá submeter também, mas pode fazer algumas alterações ou modificações no futuro -->
+            <input type="submit" value="Enviar">
+<button> Enviar</button>
+          </form>
 
     </main>
 </body>
+
 </html>
